@@ -1,8 +1,11 @@
 # 🪄 Sei
 
-> A fixed, patched, and modified window manager from a dwm base
+this is another dwm fork from another user because i dont undenstand c or how dwm patch works
 
-[![Screenshot](https://i.imgur.com/nxjjDO6.png)](https://i.imgur.com/nxjjDO6.png)
+changes:
+- change all keys for my taste
+- fix monocle (the original idk dosent work so i just copy the monocle func from [dwm-luke-fork](github.com/sarajevo1914/dwm-luke-fork), seem works so i leave that
+-
 
 ## Installation
 
@@ -33,20 +36,16 @@ usable on distributions with
 - [fibonacci](https://dwm.suckless.org/patches/fibonacci/),
   [deck](https://dwm.suckless.org/patches/deck/),
   [centeredmaster](https://dwm.suckless.org/patches/centeredmaster/), and more:
-  New layout options bound to keys <kbd>super+(shift+)t/y/u/i</kbd>
-- [actualfullscreen](https://dwm.suckless.org/patches/actualfullscreen/): Using
-  <kbd>super+f</kbd>, and prevents focus shifting
-- [sticky](https://dwm.suckless.org/patches/sticky/): Persist window across all
-  tags using <kbd>super+s</kbd>
-- [statuscmd](https://dwm.suckless.org/patches/statuscmd/): A clickable status
+  New layout options bound to keys
+  - [actualfullscreen](https://dwm.suckless.org/patches/actualfullscreen/): Using
+ - [sticky](https://dwm.suckless.org/patches/sticky/): Persist window across all
+ - [statuscmd](https://dwm.suckless.org/patches/statuscmd/): A clickable status
   bar, applied if using Luke Smith's build of [dwmblocks](https://github.com/lukesmithxyz/dwmblocks)
 - [hide vacant tags](https://dwm.suckless.org/patches/hide_vacant_tags/): Hides
   tags with no windows
 - [stacker](https://dwm.suckless.org/patches/stacker/): Move windows up the
-  stack manually using <kbd>super-K/J</kbd>
-- [shiftview](https://dwm.suckless.org/patches/nextprev/): Cycle through tags
-  using <kbd>super+g/;</kbd>
-- [vanitygaps](https://dwm.suckless.org/patches/vanitygaps/): Gaps allowed
+ - [shiftview](https://dwm.suckless.org/patches/nextprev/): Cycle through tags
+ - [vanitygaps](https://dwm.suckless.org/patches/vanitygaps/): Gaps allowed
   across all layouts
 - [swallow](https://dwm.suckless.org/patches/swallow/): Replaces terminal with
   program if spawned from terminal
