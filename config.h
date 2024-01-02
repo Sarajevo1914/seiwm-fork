@@ -23,7 +23,7 @@ static unsigned int gappiv = 10; /* vert inner gap between windows */
 static unsigned int gappoh = 10; /* horiz outer gap between windows and screen edge */
 static unsigned int gappov = 10; /* vert outer gap between windows and screen edge */
 static int swallowfloating =  0; /* 1 means swallow floating windows by default */
-static int smartgaps = 0;   /* 1 means no outer gap when there is only one window */
+static int smartgaps = 1;   /* 1 means no outer gap when there is only one window */
 static int showbar = 1; /* 0 means no bar */
 static int topbar = 1;  /* 0 means bottom bar */
 #define ICONSIZE 16     /* icon size */
@@ -117,16 +117,15 @@ static const Layout layouts[] = {
       {MODKEY | ControlMask, KEY, toggleview, {.ui = 1 << TAG}},               \
       {MODKEY | ShiftMask, KEY, tag, {.ui = 1 << TAG}},                        \
       {MODKEY | ControlMask | ShiftMask, KEY, toggletag, {.ui = 1 << TAG}},
-#define STACKKEYS(MOD, ACTION)                                                 \
-  {MOD, XK_j, ACTION##stack, {.i = INC(+1)}},                                  \
-      {MOD, XK_k, ACTION##stack, {.i = INC(-1)}},                              \
-      {MOD,                                                                    \
-       XK_v,                                                                   \
-       ACTION##stack,                                                          \
-       {.i = 0}}, /* { MOD, XK_grave, ACTION##stack, {.i = PREVSEL } }, \ */
-                  /* { MOD, XK_a,     ACTION##stack, {.i = 1 } }, \ */
-                  /* { MOD, XK_z,     ACTION##stack, {.i = 2 } }, \ */
-                  /* { MOD, XK_x,     ACTION##stack, {.i = -1 } }, */
+#define STACKKEYS(MOD,ACTION) \
+    { MOD,  XK_j,   ACTION##stack,  {.i = INC(+1) } }, \
+    { MOD,  XK_k,   ACTION##stack,  {.i = INC(-1) } }, \
+    { MOD,  XK_c,   ACTION##stack,  {.i = INC(+1) } }, \
+    { MOD,  XK_v,   ACTION##stack,  {.i = 0 } }, \
+    /* { MOD, XK_grave, ACTION##stack, {.i = PREVSEL } }, \ */
+    /* { MOD, XK_a,     ACTION##stack, {.i = 1 } }, \ */
+    /* { MOD, XK_z,     ACTION##stack, {.i = 2 } }, \ */
+    /* { MOD, XK_x,     ACTION##stack, {.i = -1 } }, */
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd)                                                             \
